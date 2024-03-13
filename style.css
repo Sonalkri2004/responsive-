@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* size in px is always fixed ,does not change according to the size of screen */
+/* .box{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+    border: 5px solid black;
+} 
+/* #inner{ */
+/* height: 200px;
+    width: 200px;
+    background-color: royalblue;}   */
+
+/* size in % can change itself according to screen size ,when we use % it means it is how much times of its parents*/
+/* #box{
+    height: 50%;
+    width: 50%;
+    background-color: crimson;
+}
+#inner{
+    height: 50vh;
+    width: 80vw;
+    background-color: royalblue;
+
+} */
+
+
+/* @media (max-width:600px) {
+    .box{
+        background-color: royalblue;
+        border-radius: 50%;
+    }
+    
+} */
+/* .parent{
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap:wrap ;
+
+}
+
+.child1{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+    border: 3px solid black;
+}
+
+.child2{
+    height: 300px;
+    width: 300px;
+    background-color: crimson;
+    border: 3px solid black;
+} */
+
+.main {
+    height: 100%;
+    width: 100%;
+    background-color: ;
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    /* background-color: red; */
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vw;
+}
+
+.nav2 {
+    /* background-color: aqua; */
+    display: flex;
+    /* justify-content: space-evenly; not working because there is no space between elements so we will use the concept of gap*/
+    gap: 5vw;
+}
+
+.nav h2 {
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+.nav h4 {
+    font-size: 2vw;
+}
+
+.nav i {
+    font-size: 2vw;
+    font-weight: 700;
+    display: none;
+}
+
+.content {
+    /* height: 80%; we does not use this here because it can't subtract two dif unit (our nav height is in px and main body height in % so we will use calc fun that can easily cal the dif between two dif unit */
+    height: calc(100% - 50px);
+    width: 100%;
+    /* background-color: crimson; */
+    display: flex;
+    position: relative;
+}
+
+.left{
+    height: 100%;
+    width: 55%;
+    /* background-color: royalblue; */
+    padding: 5vw 4vw;
+}
+
+.left h1{
+    font-size: 4.2vw;
+}
+.left h1 span{
+    color: #8321E8;
+}
+
+.left p{
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: rgb(40, 1, 1);
+    width: 80%;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+}
+
+button{
+    font-size: 1.5vw;
+    padding: 1.3vw 2.3vw;
+    background-color: #8321E8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.right{
+    height: 100%;
+    width: 45%;
+    /* background-color: black; */
+    /* background-color: crimson; */
+} 
+.right img{
+    height: 100%;
+    width: 100%;
+   
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:600px) {
+    .nav {
+        /* background-color: aqua; */
+        /* color: white; */
+        padding: 5vw;
+        height: 60px;
+
+    }
+
+    .nav button{
+        display: none;
+    }
+
+    .nav h2 {
+        font-size: 6vw;
+    }
+
+    .nav h4 {
+        font-size: 4vw;
+        display: none;
+    }
+
+    .nav i {
+        display: block;
+        font-size: 5vw;
+        font-weight: 500;
+    }
+
+    .content{
+        height: calc(100% - 60px);
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+        height: 50%;
+        padding: 4vw 6vw;
+    }
+    .left h1{
+        font-size: 8vw;
+    }
+    .left p{
+        font-size: 3vw;
+        width: 90%;
+        /* margin-top: 3vw; */
+        /* margin-bottom: 4vw; */
+
+    }
+    .right{
+        width: 100%;
+        height: 50%;
+    }
+
+}
